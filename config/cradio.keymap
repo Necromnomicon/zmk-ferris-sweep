@@ -13,6 +13,18 @@
   //  flavor = "tap-preferred";
    // tapping_term_ms = <200>;
 };
+/*
+* 0  1  2  3  4       5  6  7  8  9
+  10 11 12 13 14      15 16 17 18 19
+  20 21 22 23 24      25 26 27 28 29
+            30 31     32 33
+*/
+
+#define ALPHA 0
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define FUN 4
 
 / { 
 
@@ -26,77 +38,106 @@
         
          combo_tab {
             timeout-ms = <50>;
-            key-positions = <10 11>;
+            key-positions = <11 12>;
             bindings = <&kp TAB>;
         };
         
-            combo_ralt {
+            combo_backword {
             timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
+            key-positions = <7 8>;
+            bindings = <&kp RC(BKSP)>;
         };
         
-                    combo_lalt {
+            combo_delword {
             timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LALT>;
+            key-positions = <6 7>;
+            bindings = <&kp RC(DEL)>;
         };
         
-                           combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
-        
-        
-           combo_rgui {
+            combo_del {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            bindings = <&kp RGUI>;
+            bindings = <&kp DEL>;
         };
-        
+          
+           combo_ent {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp ENTER>;
+        };
+            
+            combo_semicolon {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp SEMI>;
+        };
+          
+            combo_fortab {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp RC(TAB)>;
+        };
+          
+            combo_bactab {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp LS(LC(TAB))>;
+        };
 
-        
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
+
     };
 
         keymap {
                 compatible = "zmk,keymap";
                 
-       		default_layer {
+       		alpha_layer {
 		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I    &kp O   &kp P 
-		&kp A &kp S &kp D &kp F &kp G 			        	        &kp H &kp J &kp K &kp L &kp QUOT
-		&mt LSFT Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
-          				&mo 1 &kp LCTL  				&kp SPC &mo 2 
+		&kp Q &kp W &kp F &kp P &kp B 						&kp J &kp L &kp U &kp Y &kp QUOT 
+		&kp A &kp R &kp S &kp T &kp G 			        	&kp M &kp N &kp E &kp I &kp O
+		&kp Z &kp X &kp C &kp D &kp V				        &kp K &kp H &kp COMMA &kp DOT &kp QMARK
+          				&sl NUM &sk LSHFT   				    &kp SPC &sl NAV
 		>;
 		};
 
-       		left_layer {
+       		nav_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
-		&kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH 		&kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL 
-		&kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL 
-					    &mo 1  &kp LGUI  					&kp RGUI &mo 2 
-		>;
+        &kp TAB   &kp HOME  &kp UP    &kp END    &kp PGUP           &none &none &none  &none &kp BSPC 
+        &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PGDN           &none &sk RSHFT &sk RCTRL &sk RALT &sk RGUI   
+        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)          &none &none &none &none &kp RET
+                                        &sl SYM  &trans               &trans &trans
+        >;
 		};
 		
-		right_layer {
+		    num_layer {
 		bindings = <
-		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
-		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					  &mo 3 &kp LCTL  				&kp SPC  &mo 2 
+		&kp TAB   &kp SLASH &kp ASTRK  &kp MINUS  &kp PLUS    		&kp MINUS  &kp N7 &kp N8 &kp N9 &kp BSPC 
+		&sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &kp EQUAL 		&kp DOT    &kp N4 &kp N5 &kp N6 &kp DEL
+		&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)   		&kp COMMA  &kp N1 &kp N2 &kp N3 &kp RET
+					                        &trans &trans           &kp N0  &sl SYM
 		>;
 		};	
 		
-		tri_layer {
+		    sym_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&trans &trans   &trans   &trans  &trans
-		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5  						&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
-		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
-					 &trans &trans  					&trans &trans 
+		&kp TAB  &kp BSLH &kp GRAVE &kp UNDER &kp TILDE    		&kp MINUS &kp AMPS &kp ASTRK &kp SEMI  &kp BSPC 
+		&sk ESC  &sk LBKT &sk LBRC  &sk LPAR  &kp LT 	        &kp PLUS  &kp DLLR &kp PRCNT &kp CARET &kp DEL
+		&to 4    &kp RBKT &kp RBRC  &kp RPAR  &kp GT   		    &kp PIPE  &kp EXCL &kp AT    &kp HASH  &kp RET
+					                        &to ALPHA  &to ALPHA       &to ALPHA &to ALPHA 
 		>;
 		};	
-        
+
+            fun_layer {
+		bindings = <
+		&reset      &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &none 			&kp F12 &kp F7  &kp F8 &kp F9  &reset
+		&sk LGUI    &sk LALT     &sk LCTRL    &sk LSHFT  &none         	&kp F11 &kp F4  &kp F5 &kp F6 &none 
+		&bootloader &bt BT_CLR   &bt BT_NXT   &bt BT_PRV &none  		&kp F10 &kp F1  &kp F2 &kp F3 &bootloader  
+					                    &to ALPHA &to ALPHA             &to ALPHA &to ALPHA
+		>;
+		};	
 	};
 };
