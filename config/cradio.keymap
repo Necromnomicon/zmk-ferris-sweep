@@ -26,6 +26,13 @@
 #define SYM 3
 #define FUN 4
 
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
+
+
 / { 
 
     combos {
@@ -84,11 +91,6 @@
             bindings = <&kp LS(LC(TAB))>;
         };
 
-&sk {
-    release-after-ms = <2000>;
-    quick-release;
-    /delete-property/ ignore-modifiers;
-};
 
     };
 
