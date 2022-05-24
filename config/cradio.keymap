@@ -38,59 +38,63 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
         
          combo_tab {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <11 12>;
             bindings = <&kp TAB>;
         };
         
             combo_backword {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <7 8>;
             bindings = <&kp RC(BKSP)>;
         };
         
             combo_delword {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <6 7>;
             bindings = <&kp RC(DEL)>;
         };
         
             combo_del {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <17 18>;
             bindings = <&kp DEL>;
         };
           
            combo_ent {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <16 17>;
             bindings = <&kp ENTER>;
         };
             
             combo_semicolon {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <26 27>;
             bindings = <&kp SEMI>;
         };
           
             combo_fortab {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <2 3>;
             bindings = <&kp RC(TAB)>;
         };
           
             combo_bactab {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <1 2>;
             bindings = <&kp LS(LC(TAB))>;
         };
-
+            combo_excl {
+            timeout-ms = <20>;
+            key-positisons = <27 28>;
+            bindings = <&kp EXCL>;
+        };
 
     };
 
@@ -99,7 +103,7 @@
                 
        		alpha_layer {
 		bindings = <
-		&kp Q &kp W &kp F &kp P &kp B 						&kp J &kp L &kp U &kp Y &kp QUOT 
+		&kp Q &kp W &kp F &kp P &kp B 						&kp J &kp L &kp U &kp Y &kp APOS 
 		&kp A &kp R &kp S &kp T &kp G 			        	&kp M &kp N &kp E &kp I &kp O
 		&kp Z &kp X &kp C &kp D &kp V				        &kp K &kp H &kp COMMA &kp DOT &kp QMARK
           				&sl NUM &sk LSHFT   				    &kp SPC &sl NAV
