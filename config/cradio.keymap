@@ -49,50 +49,51 @@
             bindings = <&kp TAB>;
         };
         
-            combo_backword {
+        combo_backword {
             timeout-ms = <20>;
             key-positions = <7 8>;
             bindings = <&kp RC(BKSP)>;
         };
         
-            combo_delword {
+        combo_delword {
             timeout-ms = <20>;
             key-positions = <6 7>;
             bindings = <&kp RC(DEL)>;
         };
         
-            combo_del {
+        combo_del {
             timeout-ms = <20>;
             key-positions = <17 18>;
             bindings = <&kp DEL>;
         };
           
-           combo_ent {
+       combo_ent {
             timeout-ms = <20>;
             key-positions = <16 17>;
             bindings = <&kp ENTER>;
         };
-            
-            combo_semicolon {
+        
+        combo_semicolon {
             timeout-ms = <20>;
             key-positions = <26 27>;
             bindings = <&kp SEMI>;
         };
           
-            combo_fortab {
+        combo_fortab {
             timeout-ms = <20>;
             key-positions = <2 3>;
             bindings = <&kp RC(TAB)>;
         };
           
-            combo_bactab {
+        combo_bactab {
             timeout-ms = <20>;
             key-positions = <1 2>;
             bindings = <&kp LS(LC(TAB))>;
         };
-            combo_excl {
-            timeout-ms = <20>;
-            key-positisons = <27 28>;
+        
+        combo_excl {
+             timeout-ms = <20>;
+            key-positions = <27 28>;
             bindings = <&kp EXCL>;
         };
 
