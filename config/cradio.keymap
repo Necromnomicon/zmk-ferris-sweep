@@ -121,10 +121,6 @@
             bindings = <&kp EXCL>;
         };
     };
-};
-
-
-/ {
 
         keymap {
                 compatible = "zmk,keymap";
