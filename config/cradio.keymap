@@ -85,10 +85,10 @@
             bindings = <&kp RC(DEL)>;
         };
         
-        combo_del {
+        combo_bsp {
             timeout-ms = <20>;
             key-positions = <17 18>;
-            bindings = <&kp DEL>;
+            bindings = <&kp BSPC>;
         };
           
        combo_ent {
