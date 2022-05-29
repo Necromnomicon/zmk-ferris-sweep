@@ -120,8 +120,11 @@
             key-positions = <27 28>;
             bindings = <&kp EXCL>;
         };
-
     };
+};
+
+
+
 
         keymap {
                 compatible = "zmk,keymap";
@@ -171,4 +174,3 @@
 		>;
 		};	
 	};
-};
