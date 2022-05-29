@@ -124,7 +124,7 @@
 };
 
 
-
+/ {
 
         keymap {
                 compatible = "zmk,keymap";
@@ -174,3 +174,4 @@
 		>;
 		};	
 	};
+};
