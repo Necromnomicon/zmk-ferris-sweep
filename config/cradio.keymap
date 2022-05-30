@@ -62,6 +62,11 @@
             key-positions = <20 21>;
             bindings = <&kp LC(Z)>;
         };
+        combo_redo {
+            timeout-ms = <20>;
+            key-positions = <10 20>;
+            bindings = <&kp LS(LC(Z))>;
+        };
         combo_find {
             timeout-ms = <20>;
             key-positions = <13 14>;
@@ -155,7 +160,7 @@
 		    sym_layer {
 		bindings = <
 		&kp TAB  &kp BSLH &kp GRAVE &kp UNDER &kp TILDE    		&kp MINUS &kp AMPS &kp ASTRK &kp SEMI  &kp BSPC 
-		&sk ESC  &sk LBKT &sk LBRC  &sk LPAR  &kp LT 	        &kp PLUS  &kp DLLR &kp PRCNT &kp CARET &kp DEL
+		&sk ESC  &kp LBKT &kp LBRC  &kp LPAR  &kp LT 	        &kp PLUS  &kp DLLR &kp PRCNT &kp CARET &kp DEL
 		&to 4    &kp RBKT &kp RBRC  &kp RPAR  &kp GT   		    &kp PIPE  &kp EXCL &kp AT    &kp HASH  &kp RET
 					                        &to ALPHA  &to ALPHA       &to ALPHA &to ALPHA 
 		>;
