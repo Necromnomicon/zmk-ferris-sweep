@@ -10,9 +10,10 @@
 
 
 &mt {
-  //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
 };
+
 /*
 * 0  1  2  3  4       5  6  7  8  9
   10 11 12 13 14      15 16 17 18 19
@@ -27,9 +28,8 @@
 #define FUN 4
 
 &sk {
-    release-after-ms = <2000>;
-    quick-release;
-    /delete-property/ ignore-modifiers;
+    release-after-ms = <4000>;
+    ignore-modifiers;
 };
 
 
@@ -134,8 +134,8 @@
 		bindings = <
 		&kp Q &kp W &kp F &kp P &kp B 						&kp J &kp L &kp U &kp Y &kp APOS 
 		&kp A &kp R &kp S &kp T &kp G 			        	&kp M &kp N &kp E &kp I &kp O
-		&kp Z &kp X &kp C &kp D &kp V				        &kp K &kp H &kp COMMA &kp DOT &kp QMARK
-          				&sl NUM &sk LSHFT   				    &kp SPC &sl NAV
+		&kp Z &kp X &kp C &kp D &kp V				        &kp K &kp H &kp COMMA &kp DOT &kp SLASH
+          				&sl NUM &sk LSHFT                   &mt LS(LC(LALT)) SPC &sl NAV
 		>;
 		};
 
