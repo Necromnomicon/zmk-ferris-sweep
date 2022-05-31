@@ -28,7 +28,6 @@
 #define FUN 4
 
 &sk {
-    release-after-ms = <4000>;
     ignore-modifiers;
 };
 
