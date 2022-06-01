@@ -27,9 +27,10 @@
 #define SYM 3
 #define FUN 4
 
-&sk {
-    ignore-modifiers;
-};
+//&sk {
+  //  ignore-modifiers;
+//};
+ 
 
 
 / { 
@@ -125,6 +126,19 @@
             bindings = <&kp EXCL>;
         };
     };
+        
+        
+        behaviors {
+      skq: sticky_key_quick_release {
+        compatible = "zmk,behavior-sticky-key";
+        label = "STICKY_KEY_QUICK_RELEASE";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <1000>;
+        quick-release;
+        };
+    };
+    
 
         keymap {
                 compatible = "zmk,keymap";
@@ -167,9 +181,9 @@
 
             fun_layer {
 		bindings = <
-		&reset      &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &none 			&kp F12 &kp F7  &kp F8 &kp F9  &reset
-		&sk LGUI    &sk LALT     &sk LCTRL    &sk LSHFT  &none         	&kp F11 &kp F4  &kp F5 &kp F6 &none 
-		&bootloader &bt BT_CLR   &bt BT_NXT   &bt BT_PRV &none  		&kp F10 &kp F1  &kp F2 &kp F3 &bootloader  
+		&reset      &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &bt BT_SEL 0 		&kp F12 &kp F7  &kp F8 &kp F9  &reset
+		&sk LGUI    &sk LALT     &sk LCTRL    &sk LSHFT  &bt BT_SEL 1       &kp F11 &kp F4  &kp F5 &kp F6 &none 
+		&bootloader &bt BT_CLR   &bt BT_NXT   &bt BT_PRV &bt BT_SEL 2  		&kp F10 &kp F1  &kp F2 &kp F3 &bootloader  
 					                    &to ALPHA &to ALPHA             &to ALPHA &to ALPHA
 		>;
 		};	
