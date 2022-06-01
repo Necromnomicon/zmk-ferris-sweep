@@ -26,6 +26,8 @@
 #define NUM 2
 #define SYM 3
 #define FUN 4
+#define GAME 5
+#define GAME2 6
 
 &sk {
     ignore-modifiers; //allows for calum-style modifers 
@@ -125,6 +127,18 @@
             key-positions = <27 28>;
             bindings = <&kp EXCL>;
         };
+
+        combo_game {
+             timeout-ms = <20>;
+            key-positions = <19 29>;
+            bindings = <&tog GAME>;
+        };
+        
+        combo_capword {
+             timeout-ms = <20>;
+            key-positions = <14 15>;
+            bindings = <&caps_word>;
+        };
     };
         
         //this gives quick relese to any sticky key if it's labled &skq 
@@ -185,6 +199,24 @@
 		&sk LGUI    &sk LALT     &sk LCTRL    &sk LSHFT  &bt BT_SEL 1       &kp F11 &kp F4  &kp F5 &kp F6 &none 
 		&bootloader &bt BT_CLR   &bt BT_NXT   &bt BT_PRV &bt BT_SEL 2  		&kp F10 &kp F1  &kp F2 &kp F3 &bootloader  
 					                    &to ALPHA &to ALPHA             &to ALPHA &to ALPHA
+		>;
+		};
+        
+            game_layer {
+		bindings = <
+		&kp TAB   &kp Q &kp W &kp E &kp R 						&kp T &kp Y &kp I &kp O &kp P 
+		&kp LSHFT &kp A &kp S &kp D &kp F 			        	&kp H &kp J &kp K &kp L &kp RET
+		&kp LCTRL &kp Z &kp X &kp C &kp V				        &kp B &kp N &kp M &kp DOT &kp SLASH
+          				&lt GAME2 G &kp SPACE                   &kp SPC &kp ESC
+		>;
+		};
+
+            game2_layer {
+		bindings = <
+		&kp N0 &kp N9 &kp N8 &kp N7 &kp N6 						&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
+		&kp N4 &kp N3 &kp N2 &kp N1 &kp N5 			        	&kp F11 &kp F12 &kp E &kp I &kp O
+		&kp F4 &kp F3 &kp F2 &kp F1 &kp F5				        &kp LALT &kp H &kp COMMA &kp DOT &kp SLASH
+          				&trans &kp SPACE                        &kp SPC &kp ESC
 		>;
 		};	
 	};
