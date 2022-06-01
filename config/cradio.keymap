@@ -14,8 +14,8 @@
     tapping_term_ms = <200>;
 };
 
-/*
-* 0  1  2  3  4       5  6  7  8  9
+/* key assignments
+  0  1  2  3  4       5  6  7  8  9
   10 11 12 13 14      15 16 17 18 19
   20 21 22 23 24      25 26 27 28 29
             30 31     32 33
@@ -28,7 +28,7 @@
 #define FUN 4
 
 &sk {
-    ignore-modifiers;
+    ignore-modifiers; //allows for calum-style modifers 
 };
  
 
@@ -127,7 +127,7 @@
         };
     };
         
-        
+        //this gives quick relese to any sticky key if it's labled &skq 
         behaviors {
       skq: sticky_key_quick_release {
         compatible = "zmk,behavior-sticky-key";
