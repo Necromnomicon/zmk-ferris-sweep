@@ -168,9 +168,9 @@
 
        		nav_layer {
 		bindings = <
-        &kp TAB   &kp HOME  &kp UP    &kp END    &kp PGUP           &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp BSPC 
-        &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PGDN           &kp LG(N5) &sk RSHFT  &sk RCTRL  &sk RALT   &sk RGUI   
-        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)          &kp LG(N6) &kp LG(N7) &kp LG(N8)  &kp LG(N9) &kp RET
+        &kp PG_UP   &kp HOME  &kp UP    &kp END    &kp C_VOL_UP       &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp BSPC 
+        &kp PG_DN   &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_VOL_DN       &kp LG(N5) &sk RSHFT  &sk RCTRL  &sk RALT   &sk RGUI   
+        &kp LC(Z)   &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)          &kp LG(N6) &kp LG(N7) &kp LG(N8)  &kp LG(N9) &kp RET
                                         &sl SYM  &trans               &trans &trans
         >;
 		};
@@ -195,7 +195,7 @@
 
             fun_layer {
 		bindings = <
-		&reset      &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &bt BT_SEL 0 		&kp F12 &kp F7  &kp F8 &kp F9  &reset
+		&reset      &none        &none        &kp C_MUTE &bt BT_SEL 0 		&kp F12 &kp F7  &kp F8 &kp F9  &reset
 		&sk LGUI    &sk LALT     &sk LCTRL    &sk LSHFT  &bt BT_SEL 1       &kp F11 &kp F4  &kp F5 &kp F6 &none 
 		&bootloader &bt BT_CLR   &bt BT_NXT   &bt BT_PRV &bt BT_SEL 2  		&kp F10 &kp F1  &kp F2 &kp F3 &bootloader  
 					                    &to ALPHA &to ALPHA             &to ALPHA &to ALPHA
