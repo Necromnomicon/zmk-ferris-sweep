@@ -86,7 +86,7 @@
             bindings = <&kp RC(BKSP)>;
         };
         
-        combo_delword {
+        combo_deLGord {
             timeout-ms = <20>;
             key-positions = <6 7>;
             bindings = <&kp RC(DEL)>;
@@ -168,9 +168,9 @@
 
        		nav_layer {
 		bindings = <
-        &kp TAB   &kp HOME  &kp UP    &kp END    &kp PGUP           &kp LW(N1) &kp LW(N2) &kp LW(N3) &kp LW(N4) &kp BSPC 
+        &kp TAB   &kp HOME  &kp UP    &kp END    &kp PGUP           &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp BSPC 
         &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PGDN           &kp LG(N5) &sk RSHFT  &sk RCTRL  &sk RALT   &sk RGUI   
-        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)          &kp LW(N6) &kp LW(N7) &kp LW(N8)  &kp LW(N9) &kp RET
+        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)          &kp LG(N6) &kp LG(N7) &kp LG(N8)  &kp LG(N9) &kp RET
                                         &sl SYM  &trans               &trans &trans
         >;
 		};
