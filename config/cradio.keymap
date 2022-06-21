@@ -168,9 +168,9 @@
 
        		nav_layer {
 		bindings = <
-        &kp TAB   &kp HOME  &kp UP    &kp END    &kp PGUP           &none &none &none  &none &kp BSPC 
-        &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PGDN           &none &sk RSHFT &sk RCTRL &sk RALT &sk RGUI   
-        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)          &none &none &none &none &kp RET
+        &kp TAB   &kp HOME  &kp UP    &kp END    &kp PGUP           &kp LW(N1) &kp LW(N2) &kp LW(N3) &kp LW(N4) &kp BSPC 
+        &kp ESC   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PGDN           &kp LW(N5) &sk RSHFT  &sk RCTRL  &sk RALT   &sk RGUI   
+        &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)          &kp LW(N6) &kp LW(N7) &kp LW(8)  &kp LW(N9) &kp RET
                                         &sl SYM  &trans               &trans &trans
         >;
 		};
