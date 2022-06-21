@@ -177,19 +177,19 @@
 		
 		    num_layer {
 		bindings = <
-		&kp TAB   &kp SLASH &kp ASTRK  &kp MINUS  &kp PLUS    		&kp MINUS  &kp N7 &kp N8 &kp N9 &kp BSPC 
-		&sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &kp EQUAL 		&kp DOT    &kp N4 &kp N5 &kp N6 &kp DEL
-		&kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V)  &kp LC(F)   		&kp COMMA  &kp N1 &kp N2 &kp N3 &kp RET
+		&kp TAB   &none     &none      &none      &none    		    &kp COMMA  &kp N7 &kp N8 &kp N9 &kp DOT 
+		&sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &kp EQUAL 		&kp PLUS   &kp N4 &kp N5 &kp N6 &kp ASTRK
+		&kp LC(Z) &kp LC(X) &kp LC(C)  &kp LC(V)  &kp LC(F)   		&kp MINUS  &kp N1 &kp N2 &kp N3 &kp SLASH
 					                        &trans &trans           &kp N0  &sl SYM
 		>;
 		};	
 		
 		    sym_layer {
 		bindings = <
-		&kp TAB  &kp BSLH &kp GRAVE &kp UNDER &kp TILDE    		&kp MINUS &kp AMPS &kp ASTRK &kp SEMI  &kp BSPC 
-		&sk ESC  &kp LBKT &kp LBRC  &kp LPAR  &kp LT 	        &kp PLUS  &kp DLLR &kp PRCNT &kp CARET &kp DEL
-		&to 4    &kp RBKT &kp RBRC  &kp RPAR  &kp GT   		    &kp PIPE  &kp EXCL &kp AT    &kp HASH  &kp RET
-					                        &to ALPHA  &to ALPHA       &to ALPHA &to ALPHA 
+		&kp GRAVE &none    &none     &none     &none    		&none      &kp AMPS &kp ASTRK &none     &kp COLON 
+		&sk TILDE &kp LBKT &kp LBRC  &kp LPAR  &kp LT 	        &kp PIPE   &kp DLLR &kp PRCNT &kp CARET &kp SEMI
+		&to 4     &kp RBKT &kp RBRC  &kp RPAR  &kp GT   		&kp UNDER  &kp EXCL &kp AT    &kp HASH  &kp BSLH
+					                &to ALPHA  &to ALPHA       &to ALPHA &to ALPHA 
 		>;
 		};	
 
