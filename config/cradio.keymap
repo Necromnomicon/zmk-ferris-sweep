@@ -139,6 +139,12 @@
             key-positions = <14 15>;
             bindings = <&caps_word>;
         };
+       
+        combo_del {
+             timeout-ms = <20>;
+            key-positions = <5 6>;
+            bindings = <&kp DELETE>;
+        };
     };
         
         //this gives quick relese to any sticky key if it's labled &skq 
