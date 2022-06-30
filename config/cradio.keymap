@@ -151,11 +151,12 @@
         };
         
         combo_capword {
-             timeout-ms = <50>;
+             timeout-ms = <80>;
             key-positions = <14 15>;
             layers = <0 1 2 3 4>;
             bindings = <&caps_word>;
         };
+       
        
         
     };
