@@ -5,7 +5,7 @@ compatible = "zmk,combos";
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
-    timeout-ms = <MILLISECONDS>\
+    timeout-ms = <MILLISECONDS>;\
   };
 
 /* key assignments
