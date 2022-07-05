@@ -9,11 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-&mt {
-    flavor = "tap-preferred";
-    tapping_term_ms = <200>;
-};
-
 /* key assignments
   0  1  2  3  4       5  6  7  8  9
   10 11 12 13 14      15 16 17 18 19
@@ -29,15 +24,24 @@
 #define GAME 5
 #define GAME2 6
 
+&mt {
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
+};
+
 &sk {
     ignore-modifiers; //allows for calum-style modifers 
 };
- 
 
+ 
+/*combos {
+    #include "combos.dtsi"
+  };
+*/
  
 / { 
 
-    combos {
+   /* combos {
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
@@ -156,13 +160,31 @@
             layers = <0 1 2 3 4>;
             bindings = <&caps_word>;
         };
+        
+        combo_Lpara {
+             timeout-ms = <50>;
+            key-positions = <14 24>;
+            layers = <0 1 2 3 4>;
+            bindings = <&kp LEFT_PARENTHESIS>;
+        };
+        
+        combo_Rpara {
+             timeout-ms = <50>;
+            key-positions = <15 25>;
+            layers = <0 1 2 3 4>;
+            bindings = <&kp RIGHT_PARENTHESIS >;
+        };
        
        
         
     };
-        
+ */
+  combos {
+        #include "combos.dtsi"    
+    };
+   
         //this gives quick relese to any sticky key if it's labled &skq 
-        behaviors {
+   behaviors {
       skq: sticky_key_quick_release {
         compatible = "zmk,behavior-sticky-key";
         label = "STICKY_KEY_QUICK_RELEASE";
@@ -172,8 +194,11 @@
         quick-release;
         };
     };
-    
+};    
 
+
+
+/{
         keymap {
                 compatible = "zmk,keymap";
                 
