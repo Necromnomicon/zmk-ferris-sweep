@@ -47,4 +47,7 @@ COMBO(capsword, &caps_word, 14 15, 0 1 2 3 4, 80)
 //layer toggles
 COMBO(game, &tog GAME, 19 29, 0 5 6, 20)
 
+//functions
+COMBO(mute, &kp C_MUTE, 4 14, 1, 50)
+
 

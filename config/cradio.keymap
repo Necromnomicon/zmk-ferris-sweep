@@ -36,7 +36,7 @@
   
 / { 
   combos {
-        #include "combos.dtsi"    
+        #include "combos.dtsi"    //this directs to a list of combos
     };
    
         //this gives quick relese to any sticky key if it's labled &skq 
