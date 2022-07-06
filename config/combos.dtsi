@@ -17,23 +17,34 @@ compatible = "zmk,combos";
            30 31      32 33
 */
 
+//regular keys
 COMBO(enter, &kp ENTER, 16 17, 0 1 2 3 4, 20)
 COMBO(backspace, &kp BACKSPACE, 17 18, 0 1 2 3 4, 20)
 COMBO(tab, &kp TAB, 11 12, 0 1 2 3 4, 20)
 COMBO(escape, &kp ESCAPE, 0 1, 0 1 2 3 4, 20)
 COMBO(delete, &kp DELETE, 27 28, 0 1 2 3 4, 20)
+
+//symbols
+COMBO(semicolon, &kp SEMI, 26 27, 0 1 2 3 4, 20)
+COMBO(LeftPara, &kp LPAR, 14 24, 0 1 2 3 1, 30)
+COMBO(RightPara, &kp RPAR, 15 25, 0 1 2 3 1, 30)
+
+//copypasta
 COMBO(copy, &kp LC(C), 21 22, 0 1 2 3 4, 20)
 COMBO(paste, &kp LC(V), 22 23, 0 1 2 3 4, 20)
 COMBO(cut, &kp LC(X), 21 23, 0 1 2 3 4, 20)
 COMBO(undo, &kp LC(Z), 20 21, 0 1 2 3 1, 50)
 COMBO(redo, &kp LS(LC(Z)), 10 20, 0 1 2 3 4, 60)
 COMBO(find, &kp LC(F), 13 14, 0 1 2 3 4, 20)
+
+//fast move-correct
 COMBO(delword, &kp RC(DEL), 6 7, 0 1 2 3 4, 20)
 COMBO(bspword, &kp RC(BACKSPACE), 7 8, 0 1 2 3 4, 20)
-COMBO(semicolon, &kp SEMI, 26 27, 0 1 2 3 4, 20)
 COMBO(forwardtab, &kp RC(TAB), 2 3, 0 1 2 3 4, 20)
 COMBO(backtab, &kp LS(LC(TAB)), 1 2, 0 1 2 3 4, 20)
-COMBO(game, &tog GAME, 19 29, 0 5 6, 20)
 COMBO(capsword, &caps_word, 14 15, 0 1 2 3 4, 80)
-COMBO(LeftPara, &kp LPAR, 14 24, 0 1 2 3 1, 30)
-COMBO(RightPara, &kp RPAR, 15 25, 0 1 2 3 1, 30)
+
+//layer toggles
+COMBO(game, &tog GAME, 19 29, 0 5 6, 20)
+
+
